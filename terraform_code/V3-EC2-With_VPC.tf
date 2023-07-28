@@ -3,18 +3,19 @@ provider "aws" {
 }
 
 resource "aws_instance" "demo-server" {
-    ami = "ami-022e1a32d3f742bd8"
+    ami = "ami-053b0d53c279acc90"
     instance_type = "t2.micro"
     key_name = "dpp"
     //security_groups = [ "demo-sg" ]
     vpc_security_group_ids = [aws_security_group.demo-sg.id]
-    subnet_id = aws_subnet.dpp-public-subnet-01.id
+    subnet_id = aws_subnet.dpp-public-subnet-01.id 
+
 }
 
 resource "aws_security_group" "demo-sg" {
   name        = "demo-sg"
   description = "SSH Access"
-  vpc_id = aws_vpc.dpp-vpc.id
+  vpc_id = aws_vpc.dpp-vpc.id 
   
   ingress {
     description      = "Shh access"
@@ -33,7 +34,7 @@ resource "aws_security_group" "demo-sg" {
   }
 
   tags = {
-    Name = "ssh-port"
+    Name = "ssh-prot"
 
   }
 }

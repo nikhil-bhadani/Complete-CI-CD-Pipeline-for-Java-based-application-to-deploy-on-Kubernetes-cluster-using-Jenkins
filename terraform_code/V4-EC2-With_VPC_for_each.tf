@@ -8,8 +8,8 @@ resource "aws_instance" "demo-server" {
     key_name = "dpp"
     //security_groups = [ "demo-sg" ]
     vpc_security_group_ids = [aws_security_group.demo-sg.id]
-    subnet_id = aws_subnet.dpp-public-subnet-01.id
-    for_each = toset(["jenkins-master", "build-slave", "ansible"])
+    subnet_id = aws_subnet.dpp-public-subnet-01.id 
+for_each = toset(["jenkins-master", "build-slave", "ansible"])
    tags = {
      Name = "${each.key}"
    }
@@ -18,7 +18,7 @@ resource "aws_instance" "demo-server" {
 resource "aws_security_group" "demo-sg" {
   name        = "demo-sg"
   description = "SSH Access"
-  vpc_id = aws_vpc.dpp-vpc.id
+  vpc_id = aws_vpc.dpp-vpc.id 
   
   ingress {
     description      = "SHH access"
@@ -36,8 +36,6 @@ resource "aws_security_group" "demo-sg" {
     cidr_blocks      = ["0.0.0.0/0"]
     }
 
-    
-
   egress {
     from_port        = 0
     to_port          = 0
@@ -47,7 +45,7 @@ resource "aws_security_group" "demo-sg" {
   }
 
   tags = {
-    Name = "ssh-port"
+    Name = "ssh-prot"
 
   }
 }
