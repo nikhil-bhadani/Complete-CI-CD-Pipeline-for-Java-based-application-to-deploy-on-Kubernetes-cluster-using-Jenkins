@@ -1,4 +1,10 @@
 # Complete-CI-CD-Pipeline-for-Java-based-application-to-deploy-on-Kubernetes-cluster-using-Jenkins
+
+![Pipeline snap](https://github.com/nikhil-bhadani/Complete-CI-CD-Pipeline-for-Java-based-application-to-deploy-on-Kubernetes-cluster-using-Jenkins/assets/126393514/8a76f361-a06b-4e5a-92bd-8bb8bdbee863)
+
+
+# CI/CD pipeline automates the entire software development and deployment process. It begins with infrastructure provisioning, configures Jenkins and sets up a multi-branch pipeline. Code quality is assessed with SonarQube, and artifacts are stored in Artifactory. Docker containers are created, and Kubernetes handles deployment. Finally, Prometheus and Grafana offer continuous monitoring. This end-to-end automation ensures efficient and reliable software development and delivery.
+
 Here's a brief explanation of the CI/CD pipeline that I have implemented :
 
 # Infrastructure Provisioning with Terraform:
@@ -37,8 +43,11 @@ Docker is utilized to containerize your applications. Dockerfiles are created to
 # Kubernetes Deployment with Helm:
 
 Terraform provisions a Kubernetes cluster, and Helm is used to manage Kubernetes deployments. Helm charts define the deployment configurations for your applications.
-Monitoring with Prometheus and Grafana:
+
+# Monitoring with Prometheus and Grafana:
 
 Helm charts are used to set up Prometheus and Grafana for monitoring the Kubernetes cluster and applications. This provides real-time insights into performance and reliability.
 
-# CI/CD pipeline automates the entire software development and deployment process. It begins with infrastructure provisioning, configures Jenkins and sets up a multi-branch pipeline. Code quality is assessed with SonarQube, and artifacts are stored in Artifactory. Docker containers are created, and Kubernetes handles deployment. Finally, Prometheus and Grafana offer continuous monitoring. This end-to-end automation ensures efficient and reliable software development and delivery.
+
+
+
